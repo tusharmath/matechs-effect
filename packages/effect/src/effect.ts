@@ -63,7 +63,7 @@ export interface Effect<R, E, A> {
   _TAG: "Effect";
   _E: E;
   _A: A;
-  (_: R): void;
+  _R: (_: R) => void;
 }
 
 export type IO<E, A> = Effect<NoEnv, E, A>;
